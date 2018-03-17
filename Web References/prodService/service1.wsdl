@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://seu-us.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://seu-us.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://seu-us.com/">
+      <s:element name="GetEmployeesByLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="locationId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeesByLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeesByLocationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeesByLocationwPhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="locationId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeesByLocationwPhotoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeesByLocationwPhotoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeewPhoto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employeeId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeewPhotoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeewPhotoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employeeId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBirthdays">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="locationID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBirthdaysResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBirthdaysResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="workorderid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWorkOrderResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEditLoads">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="locaID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="eDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEditLoadsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEditLoadsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getParentCompany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="locationID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getParentCompanyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getParentCompanyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBanners">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="locationID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBannersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getBannersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDockMonitorReportData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="locationName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="showAll" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDockMonitorReportDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDockMonitorReportDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Authenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputs" type="tns:ExternalLoginProviderInputs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExternalLoginProviderInputs">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="InputVariables" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateResult" type="tns:ExternalLoginProviderResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ExternalLoginProviderResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OutputVariables" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="tAuthenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="loginPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="tAuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tAuthenticateResult" type="tns:ExternalLoginProviderResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ExternalLoginProviderResult" nillable="true" type="tns:ExternalLoginProviderResult" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEmployeesByLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeesByLocation" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesByLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeesByLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesByLocationwPhotoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeesByLocationwPhoto" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesByLocationwPhotoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeesByLocationwPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeewPhotoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeewPhoto" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeewPhotoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeewPhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployee" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBirthdaysSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBirthdays" />
+  </wsdl:message>
+  <wsdl:message name="GetBirthdaysSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBirthdaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkOrder" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEditLoadsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEditLoads" />
+  </wsdl:message>
+  <wsdl:message name="GetEditLoadsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEditLoadsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getParentCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:getParentCompany" />
+  </wsdl:message>
+  <wsdl:message name="getParentCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:getParentCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBannersSoapIn">
+    <wsdl:part name="parameters" element="tns:getBanners" />
+  </wsdl:message>
+  <wsdl:message name="getBannersSoapOut">
+    <wsdl:part name="parameters" element="tns:getBannersResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDockMonitorReportDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getDockMonitorReportData" />
+  </wsdl:message>
+  <wsdl:message name="getDockMonitorReportDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getDockMonitorReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="AuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="tAuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:tAuthenticate" />
+  </wsdl:message>
+  <wsdl:message name="tAuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:tAuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesByLocationHttpGetIn">
+    <wsdl:part name="locationId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesByLocationHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesByLocationwPhotoHttpGetIn">
+    <wsdl:part name="locationId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesByLocationwPhotoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeewPhotoHttpGetIn">
+    <wsdl:part name="employeeId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeewPhotoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeHttpGetIn">
+    <wsdl:part name="employeeId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetBirthdaysHttpGetIn">
+    <wsdl:part name="locationID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBirthdaysHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkOrderHttpGetIn">
+    <wsdl:part name="workorderid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkOrderHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetEditLoadsHttpGetIn">
+    <wsdl:part name="locaID" type="s:string" />
+    <wsdl:part name="sDate" type="s:string" />
+    <wsdl:part name="eDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEditLoadsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getParentCompanyHttpGetIn">
+    <wsdl:part name="locationID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getParentCompanyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getBannersHttpGetIn">
+    <wsdl:part name="locationID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getBannersHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="getDockMonitorReportDataHttpGetIn">
+    <wsdl:part name="locationName" type="s:string" />
+    <wsdl:part name="showAll" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDockMonitorReportDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="tAuthenticateHttpGetIn">
+    <wsdl:part name="LoginUsername" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="tAuthenticateHttpGetOut">
+    <wsdl:part name="Body" element="tns:ExternalLoginProviderResult" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesByLocationHttpPostIn">
+    <wsdl:part name="locationId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesByLocationHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesByLocationwPhotoHttpPostIn">
+    <wsdl:part name="locationId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeesByLocationwPhotoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeewPhotoHttpPostIn">
+    <wsdl:part name="employeeId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeewPhotoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeHttpPostIn">
+    <wsdl:part name="employeeId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetBirthdaysHttpPostIn">
+    <wsdl:part name="locationID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBirthdaysHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkOrderHttpPostIn">
+    <wsdl:part name="workorderid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkOrderHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetEditLoadsHttpPostIn">
+    <wsdl:part name="locaID" type="s:string" />
+    <wsdl:part name="sDate" type="s:string" />
+    <wsdl:part name="eDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEditLoadsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getParentCompanyHttpPostIn">
+    <wsdl:part name="locationID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getParentCompanyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getBannersHttpPostIn">
+    <wsdl:part name="locationID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getBannersHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="getDockMonitorReportDataHttpPostIn">
+    <wsdl:part name="locationName" type="s:string" />
+    <wsdl:part name="showAll" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getDockMonitorReportDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="tAuthenticateHttpPostIn">
+    <wsdl:part name="LoginUsername" type="s:string" />
+    <wsdl:part name="loginPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="tAuthenticateHttpPostOut">
+    <wsdl:part name="Body" element="tns:ExternalLoginProviderResult" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="GetEmployeesByLocation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Employees</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeesByLocationSoapIn" />
+      <wsdl:output message="tns:GetEmployeesByLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesByLocationwPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Employees with photo data</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeesByLocationwPhotoSoapIn" />
+      <wsdl:output message="tns:GetEmployeesByLocationwPhotoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeewPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns single Employee w/ photo data</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeewPhotoSoapIn" />
+      <wsdl:output message="tns:GetEmployeewPhotoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns single Employee</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeeSoapIn" />
+      <wsdl:output message="tns:GetEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBirthdays">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns first and last name of Employees with birthday today</wsdl:documentation>
+      <wsdl:input message="tns:GetBirthdaysSoapIn" />
+      <wsdl:output message="tns:GetBirthdaysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns single WorkOrder</wsdl:documentation>
+      <wsdl:input message="tns:GetWorkOrderSoapIn" />
+      <wsdl:output message="tns:GetWorkOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEditLoads">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of open loads</wsdl:documentation>
+      <wsdl:input message="tns:GetEditLoadsSoapIn" />
+      <wsdl:output message="tns:GetEditLoadsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getParentCompany">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns name of location parent company</wsdl:documentation>
+      <wsdl:input message="tns:getParentCompanySoapIn" />
+      <wsdl:output message="tns:getParentCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBanners">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns location specific Dock Monitor Banners</wsdl:documentation>
+      <wsdl:input message="tns:getBannersSoapIn" />
+      <wsdl:output message="tns:getBannersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDockMonitorReportData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns Dock Monitor load grids data</wsdl:documentation>
+      <wsdl:input message="tns:getDockMonitorReportDataSoapIn" />
+      <wsdl:output message="tns:getDockMonitorReportDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">AD integration: External login Provider for Support Site</wsdl:documentation>
+      <wsdl:input message="tns:AuthenticateSoapIn" />
+      <wsdl:output message="tns:AuthenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tAuthenticate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">AD integration Test: External login Provider for Support Site</wsdl:documentation>
+      <wsdl:input message="tns:tAuthenticateSoapIn" />
+      <wsdl:output message="tns:tAuthenticateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpGet">
+    <wsdl:operation name="GetEmployeesByLocation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Employees</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeesByLocationHttpGetIn" />
+      <wsdl:output message="tns:GetEmployeesByLocationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesByLocationwPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Employees with photo data</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeesByLocationwPhotoHttpGetIn" />
+      <wsdl:output message="tns:GetEmployeesByLocationwPhotoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeewPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns single Employee w/ photo data</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeewPhotoHttpGetIn" />
+      <wsdl:output message="tns:GetEmployeewPhotoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns single Employee</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeeHttpGetIn" />
+      <wsdl:output message="tns:GetEmployeeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBirthdays">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns first and last name of Employees with birthday today</wsdl:documentation>
+      <wsdl:input message="tns:GetBirthdaysHttpGetIn" />
+      <wsdl:output message="tns:GetBirthdaysHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns single WorkOrder</wsdl:documentation>
+      <wsdl:input message="tns:GetWorkOrderHttpGetIn" />
+      <wsdl:output message="tns:GetWorkOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEditLoads">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of open loads</wsdl:documentation>
+      <wsdl:input message="tns:GetEditLoadsHttpGetIn" />
+      <wsdl:output message="tns:GetEditLoadsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getParentCompany">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns name of location parent company</wsdl:documentation>
+      <wsdl:input message="tns:getParentCompanyHttpGetIn" />
+      <wsdl:output message="tns:getParentCompanyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBanners">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns location specific Dock Monitor Banners</wsdl:documentation>
+      <wsdl:input message="tns:getBannersHttpGetIn" />
+      <wsdl:output message="tns:getBannersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDockMonitorReportData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns Dock Monitor load grids data</wsdl:documentation>
+      <wsdl:input message="tns:getDockMonitorReportDataHttpGetIn" />
+      <wsdl:output message="tns:getDockMonitorReportDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tAuthenticate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">AD integration Test: External login Provider for Support Site</wsdl:documentation>
+      <wsdl:input message="tns:tAuthenticateHttpGetIn" />
+      <wsdl:output message="tns:tAuthenticateHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpPost">
+    <wsdl:operation name="GetEmployeesByLocation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Employees</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeesByLocationHttpPostIn" />
+      <wsdl:output message="tns:GetEmployeesByLocationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesByLocationwPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of Employees with photo data</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeesByLocationwPhotoHttpPostIn" />
+      <wsdl:output message="tns:GetEmployeesByLocationwPhotoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeewPhoto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns single Employee w/ photo data</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeewPhotoHttpPostIn" />
+      <wsdl:output message="tns:GetEmployeewPhotoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns single Employee</wsdl:documentation>
+      <wsdl:input message="tns:GetEmployeeHttpPostIn" />
+      <wsdl:output message="tns:GetEmployeeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBirthdays">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns first and last name of Employees with birthday today</wsdl:documentation>
+      <wsdl:input message="tns:GetBirthdaysHttpPostIn" />
+      <wsdl:output message="tns:GetBirthdaysHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrder">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns single WorkOrder</wsdl:documentation>
+      <wsdl:input message="tns:GetWorkOrderHttpPostIn" />
+      <wsdl:output message="tns:GetWorkOrderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEditLoads">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns list of open loads</wsdl:documentation>
+      <wsdl:input message="tns:GetEditLoadsHttpPostIn" />
+      <wsdl:output message="tns:GetEditLoadsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getParentCompany">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns name of location parent company</wsdl:documentation>
+      <wsdl:input message="tns:getParentCompanyHttpPostIn" />
+      <wsdl:output message="tns:getParentCompanyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBanners">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns location specific Dock Monitor Banners</wsdl:documentation>
+      <wsdl:input message="tns:getBannersHttpPostIn" />
+      <wsdl:output message="tns:getBannersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDockMonitorReportData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns Dock Monitor load grids data</wsdl:documentation>
+      <wsdl:input message="tns:getDockMonitorReportDataHttpPostIn" />
+      <wsdl:output message="tns:getDockMonitorReportDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="tAuthenticate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">AD integration Test: External login Provider for Support Site</wsdl:documentation>
+      <wsdl:input message="tns:tAuthenticateHttpPostIn" />
+      <wsdl:output message="tns:tAuthenticateHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmployeesByLocation">
+      <soap:operation soapAction="http://seu-us.com/GetEmployeesByLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesByLocationwPhoto">
+      <soap:operation soapAction="http://seu-us.com/GetEmployeesByLocationwPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeewPhoto">
+      <soap:operation soapAction="http://seu-us.com/GetEmployeewPhoto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap:operation soapAction="http://seu-us.com/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBirthdays">
+      <soap:operation soapAction="http://seu-us.com/GetBirthdays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrder">
+      <soap:operation soapAction="http://seu-us.com/GetWorkOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEditLoads">
+      <soap:operation soapAction="http://seu-us.com/GetEditLoads" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getParentCompany">
+      <soap:operation soapAction="http://seu-us.com/getParentCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBanners">
+      <soap:operation soapAction="http://seu-us.com/getBanners" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDockMonitorReportData">
+      <soap:operation soapAction="http://seu-us.com/getDockMonitorReportData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://seu-us.com/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tAuthenticate">
+      <soap:operation soapAction="http://seu-us.com/tAuthenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmployeesByLocation">
+      <soap12:operation soapAction="http://seu-us.com/GetEmployeesByLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesByLocationwPhoto">
+      <soap12:operation soapAction="http://seu-us.com/GetEmployeesByLocationwPhoto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeewPhoto">
+      <soap12:operation soapAction="http://seu-us.com/GetEmployeewPhoto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap12:operation soapAction="http://seu-us.com/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBirthdays">
+      <soap12:operation soapAction="http://seu-us.com/GetBirthdays" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrder">
+      <soap12:operation soapAction="http://seu-us.com/GetWorkOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEditLoads">
+      <soap12:operation soapAction="http://seu-us.com/GetEditLoads" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getParentCompany">
+      <soap12:operation soapAction="http://seu-us.com/getParentCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBanners">
+      <soap12:operation soapAction="http://seu-us.com/getBanners" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDockMonitorReportData">
+      <soap12:operation soapAction="http://seu-us.com/getDockMonitorReportData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap12:operation soapAction="http://seu-us.com/Authenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tAuthenticate">
+      <soap12:operation soapAction="http://seu-us.com/tAuthenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpGet" type="tns:Service1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetEmployeesByLocation">
+      <http:operation location="/GetEmployeesByLocation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesByLocationwPhoto">
+      <http:operation location="/GetEmployeesByLocationwPhoto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeewPhoto">
+      <http:operation location="/GetEmployeewPhoto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <http:operation location="/GetEmployee" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBirthdays">
+      <http:operation location="/GetBirthdays" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrder">
+      <http:operation location="/GetWorkOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEditLoads">
+      <http:operation location="/GetEditLoads" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getParentCompany">
+      <http:operation location="/getParentCompany" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBanners">
+      <http:operation location="/getBanners" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDockMonitorReportData">
+      <http:operation location="/getDockMonitorReportData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tAuthenticate">
+      <http:operation location="/tAuthenticate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpPost" type="tns:Service1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetEmployeesByLocation">
+      <http:operation location="/GetEmployeesByLocation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeesByLocationwPhoto">
+      <http:operation location="/GetEmployeesByLocationwPhoto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeewPhoto">
+      <http:operation location="/GetEmployeewPhoto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <http:operation location="/GetEmployee" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBirthdays">
+      <http:operation location="/GetBirthdays" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkOrder">
+      <http:operation location="/GetWorkOrder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEditLoads">
+      <http:operation location="/GetEditLoads" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getParentCompany">
+      <http:operation location="/getParentCompany" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBanners">
+      <http:operation location="/getBanners" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDockMonitorReportData">
+      <http:operation location="/getDockMonitorReportData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tAuthenticate">
+      <http:operation location="/tAuthenticate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://www.seu-us.com/Service/service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://www.seu-us.com/Service/service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpGet" binding="tns:Service1HttpGet">
+      <http:address location="http://www.seu-us.com/Service/service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpPost" binding="tns:Service1HttpPost">
+      <http:address location="http://www.seu-us.com/Service/service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

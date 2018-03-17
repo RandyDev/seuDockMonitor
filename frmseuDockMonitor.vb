@@ -9,6 +9,7 @@ Imports System.Windows.Forms
 Imports System.Xml
 Imports Telerik.WinControls.UI
 
+
 Public Class FrmseuDockMonitor
     Dim utls As New Utilities
 
@@ -290,6 +291,7 @@ Public Class FrmseuDockMonitor
     End Sub
 
     Private Sub BackgroundGaugeData_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundGaugeData.DoWork
+        'TODO edit web method and get data for guage get rid of dba
         'get scheduled
         palletsPieces = New PalletsPieces
         Dim dba As New DBAccess
@@ -517,14 +519,12 @@ Public Class FrmseuDockMonitor
         If bannerArray Is Nothing Then
             bannerArray = New List(Of String)
         End If
-
-        Dim dba As New DBAccess With {
-            .CommandText = "SELECT Banner From DockMonitorBanners WHERE Enabled=1 and LocationID=@locaid ORDER BY SortOrder"
-        }
-        dba.AddParameter("locaid", slocaid)
+        Dim ds As New DataSet
         Dim dt As DataTable = New DataTable
         Try
-            dt = dba.ExecuteDataSet.Tables(0)
+            Dim proxy As New prodService.Service1()
+            ds = proxy.getBanners(slocaid)
+            dt = ds.Tables(0)
         Catch ex As Exception
             Dim msg As String = ex.Message
         End Try
@@ -541,17 +541,17 @@ Public Class FrmseuDockMonitor
 
     Private Sub GetBirthdays(ByVal locaid As String)
         Dim dt As New DataTable
+        Dim ds As DataSet = New DataSet
         Dim bday As New Birthday
         birthdays = New List(Of Birthday)
-        'TO DO wire up HR database
-        Dim dba As New DBAccess("hr") With {
-            .CommandText = "SELECT EmployeeFirstName, EmployeeLastName FROM Employees " &
-            "WHERE DATEPART(d, EmployeeDOB) = DATEPART(d, GETDATE()) " &
-            "AND DATEPART(m, EmployeeDOB) = DATEPART(m, GETDATE()) " &
-            "AND LocaID = @locaID" ' @@@@@ Stored as string in 0/0/00 format 0/0/00
-            }
-        dba.AddParameter("@locaID", slocaid)
-        '        dt = dba.ExecuteDataSet.Tables(0)
+
+        Dim proxy As New prodService.Service1()
+        Try
+            ds = proxy.GetBirthdays(locaid)
+            dt = ds.Tables(0)
+        Catch ex As Exception
+
+        End Try
         If Not dt Is Nothing Then
             If dt.Rows.Count > 0 Then
                 For Each row As DataRow In dt.Rows
@@ -697,23 +697,11 @@ Public Class FrmseuDockMonitor
 
 #Region "RadGridView1    '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     Public Function GetWorkOrders(ByVal locationName As String, Optional ByVal hideActive As Boolean = True) As DataTable
-        Dim dba As New DBAccess
-        'default True = all loads False hides completed (active loads only)
-        '        Dim constr As String = "Data Source=reports.div-log.com;Initial Catalog=RTDS;Persist Security Info=True;User ID=rtds;Password=southeast1"
-        If hideActive Then
-            dba.CommandText = "SELECT DoorNumber, Vendor, PurchaseOrder, Carrier, TrailerNumber, AppointmentTime, DockTime, StartTime, CompTime, Department, ID, Unloaders " &
-                "FROM dbo.tblfunc_DockMonAllLoads('" & locationName & "') AS DockMonAllLoads" 'all loads
-        Else
-            dba.CommandText = "SELECT DoorNumber, Vendor, PurchaseOrder, Carrier, TrailerNumber, AppointmentTime, DockTime, StartTime, CompTime, Department, ID, Unloaders " &
-                "FROM dbo.tblfunc_DockMonOpenLoads('" & locationName & "') AS DockMonOpenLoads" 'hides completed
-        End If
-        'Dim sqldataadapter As SqlDataAdapter = New SqlDataAdapter(strSql, constr)
-        'sqldataadapter.SelectCommand.CommandTimeout = 120
-        'sqldataadapter.SelectCommand.CommandType = CommandType.Text
         Dim dt As DataTable = New DataTable
         Dim ds As DataSet = New DataSet
+        Dim proxy As New prodService.Service1
         Try
-            ds = dba.ExecuteDataSet()
+            ds = proxy.getDockMonitorReportData(locationName, hideActive)
             dt = ds.Tables(0)
         Catch ex As Exception
             Dim err As String = ex.Message()
@@ -872,17 +860,12 @@ Public Class FrmseuDockMonitor
 #Region "Utilities    '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     Private Function GetParentCompany(ByVal locaid As String) As String
         Dim retstr As String = String.Empty
-        Dim dba As New DBAccess With {
-            .CommandText = "SELECT ParentCompany.Name " &
-            "FROM Location INNER JOIN " &
-            "ParentCompany ON Location.ParentCompanyID = ParentCompany.ID " &
-            "WHERE (Location.ID = @locaid)"
-        }
-        dba.AddParameter("@locaid", locaid)
         Dim i As Integer = 0
+        Dim proxy As New prodService.Service1()
         Do While i < 4
             Try
-                retstr = dba.ExecuteScalar
+                Dim str = proxy.getParentCompany(locaid)
+                retstr = str
                 If retstr.Length > 0 Then i = 4
             Catch ex As Exception
                 Dim err As String = ex.Message
