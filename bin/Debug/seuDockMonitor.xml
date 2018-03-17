@@ -97,5 +97,284 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:seuDockMonitor.prodService.Service1">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.#ctor">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.GetEmployeesByLocationCompleted">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.GetEmployeesByLocationwPhotoCompleted">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.GetEmployeewPhotoCompleted">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.GetEmployeeCompleted">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.GetBirthdaysCompleted">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.GetWorkOrderCompleted">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.GetEditLoadsCompleted">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.getParentCompanyCompleted">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.getBannersCompleted">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.getDockMonitorReportDataCompleted">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.AuthenticateCompleted">
+<remarks/>
+</member>
+<member name="E:seuDockMonitor.prodService.Service1.tAuthenticateCompleted">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployeesByLocation(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployeesByLocationAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployeesByLocationAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployeesByLocationwPhoto(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployeesByLocationwPhotoAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployeesByLocationwPhotoAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployeewPhoto(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployeewPhotoAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployeewPhotoAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployee(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployeeAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEmployeeAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetBirthdays(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetBirthdaysAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetBirthdaysAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetWorkOrder(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetWorkOrderAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetWorkOrderAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEditLoads(System.String,System.DateTime,System.DateTime)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEditLoadsAsync(System.String,System.DateTime,System.DateTime)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.GetEditLoadsAsync(System.String,System.DateTime,System.DateTime,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.getParentCompany(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.getParentCompanyAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.getParentCompanyAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.getBanners(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.getBannersAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.getBannersAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.getDockMonitorReportData(System.String,System.Boolean)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.getDockMonitorReportDataAsync(System.String,System.Boolean)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.getDockMonitorReportDataAsync(System.String,System.Boolean,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.Authenticate(seuDockMonitor.prodService.ExternalLoginProviderInputs)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.AuthenticateAsync(seuDockMonitor.prodService.ExternalLoginProviderInputs)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.AuthenticateAsync(seuDockMonitor.prodService.ExternalLoginProviderInputs,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.tAuthenticate(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.tAuthenticateAsync(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.tAuthenticateAsync(System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:seuDockMonitor.prodService.Service1.CancelAsync(System.Object)">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.ExternalLoginProviderInputs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.ExternalLoginProviderInputs.InputVariables">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.ExternalLoginProviderResult">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.ExternalLoginProviderResult.Success">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.ExternalLoginProviderResult.Message">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.ExternalLoginProviderResult.OutputVariables">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetEmployeesByLocationCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetEmployeesByLocationCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.GetEmployeesByLocationCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetEmployeesByLocationwPhotoCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetEmployeesByLocationwPhotoCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.GetEmployeesByLocationwPhotoCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetEmployeewPhotoCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetEmployeewPhotoCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.GetEmployeewPhotoCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetEmployeeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetEmployeeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.GetEmployeeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetBirthdaysCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetBirthdaysCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.GetBirthdaysCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetWorkOrderCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetWorkOrderCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.GetWorkOrderCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetEditLoadsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.GetEditLoadsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.GetEditLoadsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.getParentCompanyCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.getParentCompanyCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.getParentCompanyCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.getBannersCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.getBannersCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.getBannersCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.getDockMonitorReportDataCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.getDockMonitorReportDataCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.getDockMonitorReportDataCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.AuthenticateCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.AuthenticateCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.AuthenticateCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.tAuthenticateCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:seuDockMonitor.prodService.tAuthenticateCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:seuDockMonitor.prodService.tAuthenticateCompletedEventArgs.Result">
+<remarks/>
+</member>
 </members>
 </doc>

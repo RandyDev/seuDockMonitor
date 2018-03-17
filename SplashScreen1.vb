@@ -29,7 +29,7 @@
         Version.Text = "Version {2}.{0:00}" 'System.String.Format(Version.Text, My.Application.Info.Version.Major, My.Application.Info.Version.Minor)
 
         'Copyright(info)
-        Copyright.Text = "Copyright© 2017 Southeast Unloading"
+        Copyright.Text = "Copyright© 2018 arDev"
 
     End Sub
 

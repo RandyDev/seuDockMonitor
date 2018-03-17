@@ -94,3 +94,4 @@ C:\Projects\seuDockMonitor\seuDockMonitor\obj\x86\Debug\seuDockMonitor.vbproj.Co
 C:\Projects\seuDockMonitor\seuDockMonitor\obj\x86\Debug\seuDockMonitor.exe
 C:\Projects\seuDockMonitor\seuDockMonitor\obj\x86\Debug\seuDockMonitor.xml
 C:\Projects\seuDockMonitor\seuDockMonitor\obj\x86\Debug\seuDockMonitor.pdb
+C:\Projects\seuDockMonitor\seuDockMonitor\obj\x86\Debug\seuDockMonitor.vbprojResolveAssemblyReference.cache
